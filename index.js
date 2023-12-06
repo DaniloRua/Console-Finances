@@ -87,10 +87,20 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
+let net = 0;
+
 console.log("Financial Analysis")
 console.log("--------------------------------")
 
 //total months
 
-console.log("Total Months:",finances.length);
+console.log("Total Months:", finances.length);
 
+//The net total amount of Profit/Losses over the entire period.
+
+//"For loop through the array and adding up all the numbers.
+for (let i = 0; i < finances.length; i++) {
+
+  net += finances[i][1]
+}
+console.log( "Total:",net);
