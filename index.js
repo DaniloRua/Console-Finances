@@ -87,20 +87,42 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-let net = 0;
+
 
 console.log("Financial Analysis")
 console.log("--------------------------------")
 
-//total months
-
-console.log("Total Months:", finances.length);
+//Total Months
+var totalMonths = finances.length;
+console.log("Total Months:", totalMonths);
 
 //The net total amount of Profit/Losses over the entire period.
 
-//"For loop through the array and adding up all the numbers.
+//For loop through the array and adding up all the numbers.
+let net = 0;
 for (let i = 0; i < finances.length; i++) {
 
-  net += finances[i][1]
 }
-console.log( "Total:",net);
+console.log("Total:", net);
+
+// Average change
+
+var AverageChage = 0;
+var currenMonth = 0;
+var previousMonth = 0;
+var change = 0;
+var totalChange= 0;
+
+for (let i = 0; i < finances.length; i++) {
+
+  if (i > 0) {
+
+    currenMonth = finances[i][1];
+    previousMonth = finances[i - 1][1];    
+    change = currenMonth - previousMonth;
+    totalChange += change
+  
+  }
+}
+
+console.log("Average Change: "+ totalChange/(finances.length - 1))
