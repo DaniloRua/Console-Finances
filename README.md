@@ -24,4 +24,4 @@ This is a console-based finance project designed for analyzing the financial rec
 
 ![Console Finance Screenshot](./Capture.PNG)
 
-You Can see a live demo ![here](https://danilorua.github.io/Console-Finances)
+You Can see a live demo [here](https://danilorua.github.io/Console-Finances)
