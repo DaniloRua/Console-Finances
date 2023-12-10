@@ -87,26 +87,15 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-
-
-console.log("Financial Analysis")
-console.log("--------------------------------")
-
 //Get the Total Months
 var totalMonths = finances.length;
-console.log("Total Months:", totalMonths);
 
-//The net total amount of Profit/Losses over the entire period.
-
+//The total amount of Profit/Losses over the entire period.
 //For loop through the array and adding up all the numbers.
 let net = 0;
 for (let i = 0; i < finances.length; i++) {
   net += finances[i][1]
-
 }
-console.log("Total:", net);
-
-// Calculate the Average change
 
 var AverageChage = 0;
 var currenMonth = 0;
@@ -118,18 +107,20 @@ var increase = 0;
 var greatestDecrease = '';
 var decrease = 0;
 
+
 for (let i = 0; i < finances.length; i++) {
 
+  // Calculate the Average change
   if (i > 0) {
     currenMonth = finances[i][1];
     previousMonth = finances[i - 1][1];
     change = currenMonth - previousMonth;
     totalChange += change;
-//Get the Greatest Increase
+    //Get the Greatest Increase
     if (change > increase) {
       increase = change;
       greatestIncrease = finances[i][0] + " ($" + increase + ")";
-    } 
+    }
     //Get the Greatest Decrease
     else if (change < decrease) {
       decrease = change;
@@ -138,6 +129,11 @@ for (let i = 0; i < finances.length; i++) {
   }
 }
 
+//Console display
+console.log("Financial Analysis")
+console.log("--------------------------------")
+console.log("Total:", net);
+console.log("Total Months:", totalMonths);
 console.log("Average Change: " + totalChange / (finances.length - 1))
 console.log("greatest Increase in Profits/Losses: " + greatestIncrease)
 console.log("greatest Decrease in Profits/Losses: " + greatestDecrease)
