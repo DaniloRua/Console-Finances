@@ -132,8 +132,8 @@ for (let i = 0; i < finances.length; i++) {
 //Console display
 console.log("Financial Analysis")
 console.log("--------------------------------")
-console.log("Total:", net);
 console.log("Total Months:", totalMonths);
+console.log("Total:", net);
 console.log("Average Change: " + totalChange / (finances.length - 1))
 console.log("greatest Increase in Profits/Losses: " + greatestIncrease)
 console.log("greatest Decrease in Profits/Losses: " + greatestDecrease)
