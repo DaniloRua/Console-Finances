@@ -105,13 +105,15 @@ for (let i = 0; i < finances.length; i++) {
 }
 console.log("Total:", net);
 
-// Average change
+// Calculate the Average change
 
 var AverageChage = 0;
 var currenMonth = 0;
 var previousMonth = 0;
 var change = 0;
 var totalChange= 0;
+var GreatestIncrease = '';
+var increase = 0;
 
 for (let i = 0; i < finances.length; i++) {
 
@@ -120,9 +122,26 @@ for (let i = 0; i < finances.length; i++) {
     currenMonth = finances[i][1];
     previousMonth = finances[i - 1][1];    
     change = currenMonth - previousMonth;
-    totalChange += change
+    totalChange += change;
+
+    console.log(change)
+
+    if( change > increase)
+    {
+      increase = change;
+      GreatestIncrease = finances[i][0] + " ($" + increase + ")";
+    }
   
   }
 }
 
 console.log("Average Change: "+ totalChange/(finances.length - 1))
+console.log("Greatest Increase in Profits/Losses: "+ GreatestIncrease)
+
+//Get the Greatest Increase
+
+
+//  in  Profits/Losses: Feb-2012 ($1926159)
+//  in Profits/Losses: Sep-2013 ($-2196167)
+
+//Get the Greatest Decrease
