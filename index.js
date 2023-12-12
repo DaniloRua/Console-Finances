@@ -107,7 +107,6 @@ var increase = 0;
 var greatestDecrease = '';
 var decrease = 0;
 
-
 for (let i = 0; i < finances.length; i++) {
 
   // Calculate the Average change
@@ -128,12 +127,13 @@ for (let i = 0; i < finances.length; i++) {
     }
   }
 }
+var AverageChage = (totalChange /  (finances.length - 1)).toFixed(2)
 
 //Console display
 console.log("Financial Analysis")
 console.log("--------------------------------")
 console.log("Total Months:", totalMonths);
 console.log("Total:", net);
-console.log("Average Change: " + totalChange / (finances.length - 1))
+console.log("Average Change: " + AverageChage )
 console.log("greatest Increase in Profits/Losses: " + greatestIncrease)
 console.log("greatest Decrease in Profits/Losses: " + greatestDecrease)
